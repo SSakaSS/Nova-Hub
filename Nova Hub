@@ -28,7 +28,7 @@ local Window = Rayfield:CreateWindow({
        Subtitle = "Key System",
        Note = "Join on discord to get Key", 
        FileName = "Key", 
-       SaveKey = true, -
+       SaveKey = true, 
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
        Key = {"eusolomaster"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
     }
