@@ -112,6 +112,36 @@ local Window = Rayfield:CreateWindow({
     end,
  })   
 
+ --Player Info
+
+
+ local Tab = Window:CreateTab("Player Info", 94315960766335) -- Title, Image
+ local Section = Tab:CreateSection("Main")
+
+
+ local Button = Tab:CreateButton({
+    Name = "Infinite Jump",
+    Callback = function()
+        local InfiniteJumpEnabled = true
+        game:GetService("UserInputService").JumpRequest:connect(function()
+           if InfiniteJumpEnabled then
+              game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+           end
+        end)   
+    end,
+ })
+
+
+ --CREDITS
+
+ 
  local Tab = Window:CreateTab("Credits", 0) -- Title, Image
  local Section = Tab:CreateSection("By Raynner")
  local Section = Tab:CreateSection("Follow me on Insta @saaskska")
+
+ Rayfield:Notify({
+    Title = "Script Loaded Successfully",   
+    Content = "Script Hub By Raynner",
+    Duration = 6.5,
+    Image = 109900354259462,
+ })
